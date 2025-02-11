@@ -1,0 +1,59 @@
+1. Use JSR 380 for validation
+
+a) Add the dependency
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-validation</artifactId>
+</dependency>
+
+b) Use annotations
+@NotNull: The value cannot be null.
+@NotEmpty: The value cannot be null or empty (for Strings).
+@NotBlank: The value cannot be null or blank (for Strings; trims whitespace).
+@Size(min = , max = ): The value must be within the specified size range (for Strings, collections, etc.).
+@Min(value = ), @Max(value = ): The value must be within the specified numeric range.
+@Email: The value must be a valid email address.
+@Pattern(regexp = ): The value must match the given regular expression.
+@Valid: Used to cascade validation to nested objects.
+
+c) Example
+import javax.validation.constraints.*; // Import the validation constraints
+
+@Entity
+public class User {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer userId;
+
+    @NotBlank(message = "Full name cannot be blank")
+    @Size(min = 2, max = 255, message = "Full name must be between 2 and 255 characters")
+    private String fullName;
+
+    @NotBlank(message = "Username cannot be blank")
+    @Size(min = 5, max = 50, message = "Username must be between 5 and 50 characters")
+    private String username;
+
+    @Email(message = "Invalid email address")
+    private String email;
+
+    @Min(value = 18, message = "You must be at least 18 years old")  // Example numeric validation
+    private int age;
+
+    // ... other fields, getters, and setters
+}
+
+@PostMapping("/users")
+public String createUser(@Valid @ModelAttribute User user, BindingResult bindingResult) {
+    if (bindingResult.hasErrors()) {
+        // Handle validation errors (e.g., return to the form with error messages)
+        return "user-form"; // Or whatever your form view name is
+    }
+
+    // Proceed with user creation if validation is successful
+    userService.createUser(user);
+    return "redirect:/users";
+}
+
+
+2. Use Spring Security
