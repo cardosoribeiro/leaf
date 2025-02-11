@@ -8,8 +8,9 @@ Found only on the islands of New Zealand, the Weka is a flightless bird with an 
 
 # Primary goals
 
-1. Use Naive Bayes to, given a set of symptoms, predict which disease class the patient has.
-2. Use the Bradford Hill Criteria whether a statistical association between two things.
+1. Use Naive Bayes to, given a set of symptoms, predict which disease class the patient has.  
+2. Use the Bradford Hill Criteria whether a statistical association between two things.  
+3. Find some big data that can help the training. Check the Kaggle.  
 
 ## Reference
 
