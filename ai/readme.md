@@ -6,6 +6,11 @@ Weka is open-source machine learning software issued under the GNU General Publi
 
 Found only on the islands of New Zealand, the Weka is a flightless bird with an inquisitive nature.
 
+# Primary goals
+
+1. Use Naive Bayes to, given a set of symptoms, predict which disease class the patient has.
+2. Use the Bradford Hill Criteria whether a statistical association between two things.
+
 ## Reference
 
 WITTEN, Ian H. et al. Practical machine learning tools and techniques. In: Data mining. Amsterdam, The Netherlands: Elsevier, 2005. p. 403-413.
