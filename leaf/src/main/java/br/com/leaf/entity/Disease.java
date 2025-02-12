@@ -41,7 +41,7 @@ public class Disease {
     // Add relationship with Category (Many-to-Many)
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
-            name = "disease_category_assignments",
+            name = "assignment",
             joinColumns = @JoinColumn(name = "disease_id"),
             inverseJoinColumns = @JoinColumn(name = "category_id")
     )

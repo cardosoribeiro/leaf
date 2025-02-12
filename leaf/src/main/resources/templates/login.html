@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}" /> 
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Login</h1>
+
+    <div th:if="${param.error}">
+        <p style="color: red;">Invalid username or password.</p>
+    </div>
+
+    <form th:action="@{/login}" method="post">
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" /> <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required="required"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required="required"><br><br>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <p> <a th:href="@{/signup}">Create an account</a></p>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
