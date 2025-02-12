@@ -6,6 +6,16 @@ Weka is open-source machine learning software issued under the GNU General Publi
 
 Found only on the islands of New Zealand, the Weka is a flightless bird with an inquisitive nature.
 
+## About MALLET
+
+Mallet: MAchine Learning for LanguagE Toolkit. MALLET is a Java-based package for statistical natural language processing, document classification, clustering, topic modeling, information extraction, and other machine learning applications to text.
+
+MALLET includes sophisticated tools for document classification: efficient routines for converting text to “features”, a wide variety of algorithms (including Naïve Bayes, Maximum Entropy, and Decision Trees), and code for evaluating classifier performance using several commonly used metrics. Quick Start / Developer’s Guide
+
+In addition to classification, MALLET includes tools for sequence tagging for applications such as named-entity extraction from text. Algorithms include Hidden Markov Models, Maximum Entropy Markov Models, and Conditional Random Fields. These methods are implemented in an extensible system for finite state transducers. 
+
+Topic models are useful for analyzing large collections of unlabeled text. The MALLET topic modeling toolkit contains efficient, sampling-based implementations of Latent Dirichlet Allocation, Pachinko Allocation, and Hierarchical LDA. 
+
 # Primary goals
 
 1. Use Naive Bayes to, given a set of symptoms, to predict which disease class the patient has.  
