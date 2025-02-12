@@ -26,6 +26,18 @@
           <li class="nav-item">
             <a class="nav-link" th:href="@{/about}">About</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/diseases}">Diseases</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/users}">Users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/categories}">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/assignments}">Assignments</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -35,21 +47,6 @@
     <h1>Welcome to Leaf!</h1>
 
     <p>This is the home page of your diagnostic decision support system.</p>
-
-    <a th:href="@{/diseases}" class="btn btn-primary">View Diseases</a>
-    <a th:href="@{/categories}" class="btn btn-primary">View Categories</a>
-    <a th:href="@{/users}" class="btn btn-primary">View Users</a>
-
-    <div sec:authorize="hasRole('ADMINISTRATOR')">
-      <a th:href="@{/users}">Users</a> |
-      <a th:href="@{/categories}">Categories</a> |
-      <a th:href="@{/diseases}">Diseases</a> |
-      <a th:href="@{/assignments}">Assignments</a> |
-    </div>
-    <a th:href="@{/logout}">Logout</a>
-      
-  </div>
-
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -1,38 +1,142 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Leaf - About</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" th:href="@{/css/style.css}" />
+  <meta charset="UTF-8">
+  <title>Leaf - About</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" th:href="@{/css/style.css}" />
 
 </head>
+
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Leaf</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" th:href="@{/}">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" th:href="@{/about}">About</a>
-        </li>
-      </ul>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Leaf</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" th:href="@{/}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/about}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/diseases}">Diseases</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/users}">Users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/categories}">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/assignments}">Assignments</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<div class="container">
+  <div class="container">
     <h1>About Leaf</h1>
     <p>This is the about page of your diagnostic decision support system.</p>
-    </div>
+    <p>
+      Infections are caused by bacteria, fungi, other
+      microorganisms, viruses, and prions. From the
+      beginning of time, infections have been a major cause
+      of illness and death. Powerful infectious diseases that
+      sometimes give rise to epidemics like smallpox,
+      influenza, tuberculosis, and plague have had a major
+      impact on large numbers of people in the world for      
+      centuries. The types of infections that affect humans
+      include common bacterial diseases, such as
+      pneumonia, as well as viral disorders, such as chicken
+      pox.      
+    </p>
+
+    <p>
+      Noninfectious diseases include all the medical and
+      surgical conditions that are not mental disorders or
+      infections. This is a broad category that includes
+      muscular and skeletal conditions, cardiovascular
+      disease, autoimmune diseases, kidney diseases, lung
+      diseases, and diseases affecting the gastrointestinal
+      tract.      
+    </p>    
+
+    <p>
+      Mental disorders are conditions that affect thinking,
+      behavior, personality, judgment, and brain function.
+      Examples of mental disorders include anxiety,
+      depression, eating disorders, mood disorders,
+      schizophrenia, and personality disorders. Mental
+      disorders are often underdiagnosed and may not be
+      publicly disclosed because of fear of the stigma
+      associated with mental illness or because of a lack of
+      knowledge about its causes, diagnostic methods of
+      detection, or available therapies and treatments.      
+    </p>    
+
+    <p>
+      Some diseases that run in families are categorized as
+      genetic diseases; these include depression, diabetes, and
+      some cancers. In some cases, risk factors and the
+      causes of these diseases are known. However, for many
+      diseases, the exact causes are still unknown.      
+    </p>    
+
+    <p>
+      Bacteria, viruses, and other microorganisms cause
+      infections by penetrating into human or animal
+      organs, tissues, and cells and then replicating to cause
+      disease. Microorganisms can cause disease by
+      damaging and killing human cells, producing toxins,
+      and creating an inflammatory response. Some
+      microorganisms are harmless in normal healthy
+      individuals, but many microorganisms can cause
+      disease if they penetrate the body’s normal host
+      defenses and immune system. Certain organisms that
+      are less virulent and do not normally cause disease are
+      capable of causing opportunistic infections in
+      individuals who have weakened immune systems.      
+    </p>    
+
+    <p>
+      One of the unique characteristics of infectious
+      diseases is the variety of mechanisms by which these
+      diseases are transmitted or acquired. Some infectious
+      diseases are considered communicable diseases and can
+      be transmitted person to person through direct contact
+      with infected persons or a contaminated environment,
+      large droplets that are shed in close proximity when
+      infected people cough or sneeze, and airborne
+      transmission, especially in contained environments
+      with limited air circulation.            
+    </p>
+
+    <p>
+      There are also a number of infectious diseases that
+      are transmitted through exchange of body fluids or as
+      sexually transmitted diseases. Some are transmitted as
+      blood-borne pathogens through transfusions or they
+      are spread when people share contaminated needles or
+      when they have unprotected intercourse with infected
+      persons. Still other infections occur through fecaloral
+      contamination, when food or water become
+      contaminated with bacteria or viruses, or both, causing
+      vomiting and diarrhea. Infections such as rabies can
+      be acquired from animals; this is called zoonotic
+      transmission.      
+    </p>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

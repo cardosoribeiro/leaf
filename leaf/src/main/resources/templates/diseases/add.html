@@ -1,74 +1,90 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Add Disease</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Leaf</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" th:href="@{/}">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" th:href="@{/about}">About</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      
-    <div class="container">
-        <h1>Add New Disease</h1>
-        <form th:action="@{/diseases/save}" th:object="${disease}" method="post">
-            <div class="mb-3">
-                <label for="diseaseName" class="form-label">Name</label>
-                <input type="text" class="form-control" id="diseaseName" th:field="*{diseaseName}" required>
-            </div>
-            <div class="mb-3">
-                <label for="description" class="form-label">Description</label>
-                <textarea class="form-control" id="description" th:field="*{description}" rows="3" required></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="causes" class="form-label">Causes</label>
-                <textarea class="form-control" id="causes" th:field="*{causes}" rows="3"></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="symptoms" class="form-label">Symptoms</label>
-                <textarea class="form-control" id="symptoms" th:field="*{symptoms}" rows="3"></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="diagnosis" class="form-label">Diagnosis</label>
-                <textarea class="form-control" id="diagnosis" th:field="*{diagnosis}" rows="3"></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="treatments" class="form-label">Treatments</label>
-                <textarea class="form-control" id="treatments" th:field="*{treatments}" rows="3"></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="pathogenesis" class="form-label">Pathogenesis</label>
-                <textarea class="form-control" id="pathogenesis" th:field="*{pathogenesis}" rows="3"></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="prevention" class="form-label">Prevention</label>
-                <textarea class="form-control" id="prevention" th:field="*{prevention}" rows="3"></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="epidemiology" class="form-label">Epidemiology</label>
-                <textarea class="form-control" id="epidemiology" th:field="*{epidemiology}" rows="3"></textarea>
-            </div>
 
-            <button type="submit" class="btn btn-primary">Save</button>
-            <a th:href="@{/diseases}" class="btn btn-secondary">Cancel</a>
-        </form>
+<head>
+  <meta charset="UTF-8">
+  <title>Add Disease</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Leaf</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" th:href="@{/}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/about}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/diseases}">Diseases</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/users}">Users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/categories}">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/assignments}">Assignments</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </nav>
+
+  <div class="container">
+    <h1>Add New Disease</h1>
+    <form th:action="@{/diseases/save}" th:object="${disease}" method="post">
+      <div class="mb-3">
+        <label for="diseaseName" class="form-label">Name</label>
+        <input type="text" class="form-control" id="diseaseName" th:field="*{diseaseName}" required>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea class="form-control" id="description" th:field="*{description}" rows="3" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="causes" class="form-label">Causes</label>
+        <textarea class="form-control" id="causes" th:field="*{causes}" rows="3"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="symptoms" class="form-label">Symptoms</label>
+        <textarea class="form-control" id="symptoms" th:field="*{symptoms}" rows="3"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="diagnosis" class="form-label">Diagnosis</label>
+        <textarea class="form-control" id="diagnosis" th:field="*{diagnosis}" rows="3"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="treatments" class="form-label">Treatments</label>
+        <textarea class="form-control" id="treatments" th:field="*{treatments}" rows="3"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="pathogenesis" class="form-label">Pathogenesis</label>
+        <textarea class="form-control" id="pathogenesis" th:field="*{pathogenesis}" rows="3"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="prevention" class="form-label">Prevention</label>
+        <textarea class="form-control" id="prevention" th:field="*{prevention}" rows="3"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="epidemiology" class="form-label">Epidemiology</label>
+        <textarea class="form-control" id="epidemiology" th:field="*{epidemiology}" rows="3"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Save</button>
+      <a th:href="@{/diseases}" class="btn btn-secondary">Cancel</a>
+    </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
