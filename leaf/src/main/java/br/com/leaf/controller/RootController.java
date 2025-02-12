@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class RootController {
-
+    
     @GetMapping("/") // Maps to the root URL ("/")
-    public String home() {
+    public String home() {        
         return "index"; // Logical view name (Thymeleaf will look for index.html)
     }
 
