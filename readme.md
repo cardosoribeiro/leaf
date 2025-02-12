@@ -19,11 +19,17 @@ Leaf was written in Java 8.
 ## How to compile
 
 ```bash
-mvn clean package
+mvn compile
 ```
 
 ## How to run static analisys
 
 ```bash
 mvn compile pmd:pmd
+```
+
+## How to build
+
+```bash
+mvn clean package
 ```
