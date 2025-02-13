@@ -30,6 +30,8 @@ https://www.kaggle.com/datasets/niyarrbarman/symptom2disease
 
 ## Reference
 
+https://youtube.com/playlist?list=PLea0WJq13cnBVfsPVNyRAus2NK-KhCuzJ&si=uwXrMn0ryB72Iy8f
+
 WITTEN, Ian H. et al. Practical machine learning tools and techniques. In: Data mining. Amsterdam, The Netherlands: Elsevier, 2005. p. 403-413.
 
 Eibe Frank, Mark A. Hall, and Ian H. Witten (2016). The WEKA Workbench. Online Appendix for "Data Mining: Practical Machine Learning Tools and Techniques", Morgan Kaufmann, Fourth Edition, 2016.  
